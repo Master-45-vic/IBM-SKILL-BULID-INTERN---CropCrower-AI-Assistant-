@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/ibm-iam/:match*",
+      "destination": "https://iam.cloud.ibm.com/:match*"
+    },
+    {
+      "source": "/api/watson/:match*",
+      "destination": "https://api.au-syd.watson-orchestrate.cloud.ibm.com/:match*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
