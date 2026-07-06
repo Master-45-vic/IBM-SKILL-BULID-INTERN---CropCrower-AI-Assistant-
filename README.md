@@ -19,6 +19,11 @@ CropGrower AI is a smart, interactive agricultural assistant designed to help fa
 - **Icons**: React Icons (Feather)
 - **Markdown**: `react-markdown`, `remark-gfm`
 
+## 🧰 Backend Tools Architecture
+
+The heavy lifting (like fetching live weather, soil data, and market prices) is separated into its own tools repository. These tools are natively invoked by IBM Watsonx Orchestrate.
+- **Tools Repository**: [cropgrower-tools](https://github.com/Master-45-vic/cropgrower-tools.git)
+
 ## ⚙️ Local Development Setup
 
 To run this project locally, follow these steps:
