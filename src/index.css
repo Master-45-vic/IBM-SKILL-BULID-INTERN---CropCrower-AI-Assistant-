@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Forcing dark mode classes explicitly */
+    @apply antialiased bg-dark-bg text-text-main font-sans;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-dark-card/60 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-[20px];
+  }
+  
+  .glass-panel {
+    @apply bg-dark-bg/80 backdrop-blur-xl border-r border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-green to-secondary-green;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Background floating animation elements */
+.bg-floating-farm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #0F172A;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('/1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-floating-farm::before,
+.bg-floating-farm::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  animation: float 15s ease-in-out infinite alternate;
+}
+
+.bg-floating-farm::before {
+  background: radial-gradient(circle, #2E7D32, transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.bg-floating-farm::after {
+  background: radial-gradient(circle, #FFA726, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  animation-delay: -5s;
+}
+
+.dark .bg-floating-farm::before,
+.dark .bg-floating-farm::after {
+  opacity: 0.1;
+}
