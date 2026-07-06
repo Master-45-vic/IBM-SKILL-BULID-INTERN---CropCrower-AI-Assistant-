@@ -1,5 +1,7 @@
 # 🌱 CropGrower AI Assistant
 
+**🌟 Live Demo:** [https://cropgrower.vercel.app/](https://cropgrower.vercel.app/)
+
 CropGrower AI is a smart, interactive agricultural assistant designed to help farmers with crop management, weather forecasting, soil health, and market prices. Built for the IBM Skill Build Internship, this application combines the power of IBM Watsonx Orchestrate with a modern React frontend and persistent Supabase database.
 
 ## 🚀 Features
