@@ -1,34 +1,77 @@
-# 🌱 CropGrower AI Assistant
+# 🌱 CropGrower AI
 
-**🌟 Live Demo:** [https://cropgrower.vercel.app/](https://cropgrower.vercel.app/)
+> **An AI-powered Smart Farming Assistant built with IBM watsonx Orchestrate**
 
-CropGrower AI is a smart, interactive agricultural assistant designed to help farmers with crop management, weather forecasting, soil health, and market prices. Built for the IBM Skill Build Internship, this application combines the power of IBM Watsonx Orchestrate with a modern React frontend and persistent Supabase database.
+**🌟 Live Demo:** [https://cropgrower.vercel.app/](https://cropgrower.vercel.app/)  
+**🧰 Backend Tools API:** [https://cropgrower-tools.onrender.com](https://cropgrower-tools.onrender.com)  
+**💻 Tools Repository:** [cropgrower-tools on GitHub](https://github.com/Master-45-vic/cropgrower-tools.git)
 
-## 🚀 Features
+CropGrower AI is an intelligent farming assistant that helps farmers make informed agricultural decisions using trusted agricultural knowledge, real-time weather information, soil analysis, and live market prices. It combines Retrieval-Augmented Generation (RAG) with external APIs to provide practical and easy-to-understand farming recommendations. Built for the IBM Skill Build Internship!
 
-- **IBM Watsonx Integration**: Intelligent, context-aware AI responses tailored for agriculture.
-- **Persistent Chat History**: Powered by Supabase, your conversations are automatically saved and restored across sessions using an anonymous session tracking system.
-- **Voice-to-Text Input**: Speak your questions directly to the AI using built-in browser speech recognition.
-- **PDF Document Upload**: Upload documents (like soil reports or manuals) and the AI will use them as context for your conversation.
-- **Modern UI**: A responsive, glassmorphism design built with Tailwind CSS and Framer Motion for smooth animations.
-- **Rich Markdown Responses**: Beautifully rendered tables and text for easy reading.
+---
+
+## ✨ Features
+
+- 🌾 **AI-powered farming assistant**: Context-aware AI tailored for agriculture.
+- 🌦️ **Real-time weather information**: Live weather data fetched on-the-fly.
+- 🧪 **Soil analysis and recommendations**: Intelligent crop suitability guidance.
+- 💰 **Live mandi market prices**: Direct market integrations.
+- 📚 **RAG-based agricultural knowledge**: Trained on expert data.
+- 📄 **Chat with uploaded PDF documents**: Upload soil reports or manuals.
+- 🎤 **Voice-to-Text support**: Built-in browser speech recognition.
+- 🔊 **Text-to-Speech responses**: AI can speak its responses to you.
+- 💬 **Persistent chat history**: Powered by Supabase.
+- 🌙 **Modern Glassmorphism UI**: Beautiful, responsive, and animated design.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React (Vite), Tailwind CSS, Framer Motion
-- **AI Backend**: IBM Watsonx Orchestrate API
-- **Database**: Supabase (PostgreSQL)
-- **Icons**: React Icons (Feather)
-- **Markdown**: `react-markdown`, `remark-gfm`
+### Frontend
+- React (Vite)
+- Tailwind CSS & Framer Motion
+- Web Speech API & Speech Synthesis API
+- `react-markdown` & React Icons
 
-## 🧰 Backend Tools Architecture
+### AI
+- IBM watsonx Orchestrate
+- Retrieval-Augmented Generation (RAG)
 
-The heavy lifting (like fetching live weather, soil data, and market prices) is separated into its own tools repository. These tools are natively invoked by IBM Watsonx Orchestrate.
-- **Tools Repository**: [cropgrower-tools](https://github.com/Master-45-vic/cropgrower-tools.git)
+### Backend (External Repository)
+- Python, Flask, Render
+- Weather API, Soil API, Market Price API
+
+### Database
+- Supabase (PostgreSQL)
+
+---
+
+## 🖥️ Application Workflow
+
+```text
+User
+   │
+   ▼
+React Frontend (Vite)
+   │
+   ▼
+IBM watsonx Orchestrate
+   │
+   ├── Weather Tool (Python API)
+   ├── Soil Tool (Python API)
+   ├── Market Tool (Python API)
+   └── RAG Knowledge Base
+   │
+   ▼
+AI Response
+   │
+   ▼
+Frontend + Supabase Chat History
+```
+
+---
 
 ## ⚙️ Local Development Setup
-
-To run this project locally, follow these steps:
 
 ### 1. Clone the repository
 ```bash
@@ -42,7 +85,7 @@ npm install
 ```
 
 ### 3. Set up Environment Variables
-Create a `.env` file in the root directory and add the following keys:
+Create a `.env` file in the root directory:
 
 ```env
 # IBM Watsonx Credentials
@@ -60,19 +103,46 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 2. Open the SQL Editor.
 3. Run the SQL script found in `supabase/schema.sql` to create the `chats` and `messages` tables.
 
-### 5. Run the development server
+### 5. Start the development server
 ```bash
 npm run dev
 ```
 
+---
+
 ## 🌐 Vercel Deployment
 
-This project is optimized for deployment on Vercel.
-
-1. Push your code to GitHub.
-2. Go to Vercel and import your repository.
-3. Under **Environment Variables**, add all 5 variables from your `.env` file (`VITE_WATSON_API_KEY`, `VITE_WATSON_URL`, `VITE_WATSON_AGENT_ID`, `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`).
-4. Click **Deploy**. Vercel will automatically build the Vite app and assign you a live URL!
+This project is optimized for deployment on Vercel. 
+Simply push to GitHub, import the repository to Vercel, and add your 5 Environment Variables in the project settings!
 
 ---
-*Built for the IBM Skill Build Internship*
+
+## 🎯 Future Improvements
+
+- Multi-language support for regional farmers
+- Secure Farmer login & accounts
+- Crop disease detection using images
+- Farm analytics dashboard
+- Mobile progressive web app (PWA)
+- Offline support
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Developed By
+
+**Prashanth M**  
+*AI | Machine Learning | Full Stack Development | IoT*  
+
+⭐ If you like this project, don't forget to **Star** the repository!
