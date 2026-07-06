@@ -6,7 +6,7 @@
     },
     {
       "source": "/api/watson/:match*",
-      "destination": "https://api.au-syd.watson-orchestrate.cloud.ibm.com/:match*"
+      "destination": "https://api.au-syd.watson-orchestrate.cloud.ibm.com/instances/b8945315-4d08-4d4d-8dea-6bb29c5ab518/:match*"
     },
     {
       "source": "/(.*)",
