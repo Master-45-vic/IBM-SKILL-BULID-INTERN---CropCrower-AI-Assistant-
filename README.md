@@ -25,6 +25,24 @@ CropGrower AI is an intelligent farming assistant that helps farmers make inform
 
 ---
 
+## 📊 Project Presentation (PPT)
+
+A detailed presentation explaining the project architecture, features, workflow, technology stack, and implementation is available here:
+
+📄 **Project PPT:**  
+👉 [Click Here ](https://canva.link/up01qjm1ngq59sr)
+
+The presentation covers:
+- 🌱 Project Overview
+- 🧠 AI Agent Architecture
+- ⚙️ System Workflow
+- ✨ Key Features
+- 🛠️ Technology Stack
+- 🚀 Live Demo
+- 🔮 Future Improvements
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
